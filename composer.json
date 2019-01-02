@@ -1,0 +1,19 @@
+{
+    "name": "u/cms",
+    "authors": [
+        {
+            "name": "MD Kawsar Ahmed Jami",
+            "email": "jamisays@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "classes"
+        ]
+    },
+    "require": {
+        "phpmailer/phpmailer": "^5.2",
+        "pusher/pusher-php-server": "^3.2",
+        "vlucas/phpdotenv": "^2.5"
+    }
+}
