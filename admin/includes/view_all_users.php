@@ -47,10 +47,18 @@
 
                         
                         //echo "<td>Some Title</td>";
-                        echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
-                        echo "<td><a href='users.php?change_to_sub={$user_id}'>Subscriber</a></td>";
-                        echo "<td><a href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";
-                        echo "<td><a href='users.php?delete={$user_id}'>Delete</a></td>";
+                        if(isAdmin(currentUser())) {
+                            echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
+                            echo "<td><a href='users.php?change_to_sub={$user_id}'>Subscriber</a></td>";
+                            echo "<td><a href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";
+                            echo "<td><a href='users.php?delete={$user_id}'>Delete</a></td>";
+                        }
+                        else {
+                            echo "<td><a class='disabled' href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
+                            echo "<td><a class='disabled' href='users.php?change_to_sub={$user_id}'>Subscriber</a></td>";
+                            echo "<td><a class='disabled' href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";
+                            echo "<td><a class='disabled' href='users.php?delete={$user_id}'>Delete</a></td>";
+                        }
                         echo "</tr>";
                     }
                     ?>

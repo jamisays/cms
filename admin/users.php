@@ -6,9 +6,9 @@
 <?php include "includes/admin_navigation.php" ?>
         
         <?php 
-           if(!isAdmin($_SESSION['username'])) {
-            header("Location: index.php");
-            }
+           // if(!isAdmin($_SESSION['username'])) {
+           //  header("Location: index.php");
+           //  }
         ?>
 
         <div id="page-wrapper">
